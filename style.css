@@ -1,0 +1,228 @@
+/* ===== RESET & BASE ===== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: linear-gradient(145deg, #f6f2f0 0%, #e8e2de 100%);
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
+  padding: 1.5rem;
+  margin: 0;
+}
+
+/* ===== CARD / CONTAINER ===== */
+.profile-card {
+  max-width: 780px;
+  width: 100%;
+  background: #ffffff;
+  border-radius: 2.5rem;
+  padding: 2.5rem 2.8rem;
+  box-shadow: 0 20px 40px -12px rgba(0, 0, 0, 0.25),
+              0 8px 24px -8px rgba(0, 0, 0, 0.15);
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  backdrop-filter: blur(2px);
+  transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+/* ===== FIXED HOVER EFFECT ===== */
+.profile-card:hover {
+  box-shadow: 0 28px 48px -16px rgba(0, 0, 0, 0.35),
+              0 12px 32px -12px rgba(0, 0, 0, 0.2);
+  transform: translateY(-4px);
+}
+
+/* ===== TYPOGRAPHY & SPACING ===== */
+h1 {
+  font-size: 2.8rem;
+  font-weight: 600;
+  letter-spacing: -0.02em;
+  color: #1e1e2a;
+  margin-bottom: 0.35rem;
+  border-bottom: 4px solid #d4c5b2;
+  padding-bottom: 0.65rem;
+  display: inline-block;
+}
+
+.name-wrapper {
+  margin-bottom: 2rem;
+}
+
+/* ===== SECTION TITLES ===== */
+h2 {
+  font-size: 1.7rem;
+  font-weight: 500;
+  color: #2c2c3a;
+  margin-top: 2rem;
+  margin-bottom: 0.9rem;
+  letter-spacing: -0.01em;
+  border-left: 6px solid #b7a48b;
+  padding-left: 0.9rem;
+}
+
+h2:first-of-type {
+  margin-top: 0.5rem;
+}
+
+/* ===== PARAGRAPHS (About Me) ===== */
+.about-text {
+  font-size: 1.08rem;
+  line-height: 1.7;
+  color: #2d2d3a;
+  background: #faf8f6;
+  padding: 1.2rem 1.6rem;
+  border-radius: 1.8rem;
+  border: 1px solid #ece6e0;
+  margin-bottom: 0.5rem;
+}
+
+.about-text p {
+  margin-bottom: 1rem;
+}
+
+.about-text p:last-child {
+  margin-bottom: 0;
+}
+
+/* ===== SKILLS LIST ===== */
+.skills-list {
+  background: #faf8f6;
+  padding: 1.6rem 2rem 1.6rem 2.8rem;
+  border-radius: 2rem;
+  border: 1px solid #ece6e0;
+  margin: 0.2rem 0 0.8rem 0;
+  list-style-type: "✦ ";
+  list-style-position: outside;
+}
+
+.skills-list li {
+  font-size: 1.08rem;
+  padding-left: 0.5rem;
+  margin-bottom: 0.65rem;
+  color: #1e1e2a;
+  line-height: 1.5;
+  border-bottom: 1px dashed #e2d8d0;
+  padding-bottom: 0.5rem;
+}
+
+.skills-list li:last-child {
+  border-bottom: none;
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
+
+/* ===== CONTACT SECTION ===== */
+.contact-links {
+  background: #faf8f6;
+  padding: 1.2rem 1.8rem;
+  border-radius: 2.5rem;
+  border: 1px solid #ece6e0;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 1.2rem 2.2rem;
+  margin: 0.8rem 0 0.2rem 0;
+}
+
+.contact-item {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 1.08rem;
+}
+
+.contact-item a {
+  color: #3f3f55;
+  text-decoration: none;
+  font-weight: 500;
+  padding: 0.25rem 0.1rem;
+  border-bottom: 2px solid transparent;
+  transition: border-color 0.2s ease, color 0.2s ease;
+}
+
+.contact-item a:hover {
+  color: #6b4f3a;
+  border-bottom-color: #b7a48b;
+}
+
+.contact-item span {
+  font-size: 1.4rem;
+  line-height: 1;
+  opacity: 0.75;
+}
+
+/* email link extra polish */
+.contact-item a[href^="mailto"] {
+  background: transparent;
+  padding: 0.2rem 0.6rem 0.2rem 0.2rem;
+  border-radius: 40px;
+}
+.contact-item a[href^="mailto"]:hover {
+  background: #ece4dc;
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 600px) {
+  .profile-card {
+    padding: 1.8rem 1.5rem;
+    border-radius: 2rem;
+  }
+  h1 {
+    font-size: 2.2rem;
+    border-bottom-width: 3px;
+  }
+  h2 {
+    font-size: 1.4rem;
+    margin-top: 1.6rem;
+    border-left-width: 5px;
+  }
+  .about-text {
+    padding: 1rem 1.2rem;
+    font-size: 1rem;
+    border-radius: 1.5rem;
+  }
+  .skills-list {
+    padding: 1.2rem 1.2rem 1.2rem 2rem;
+    border-radius: 1.5rem;
+  }
+  .skills-list li {
+    font-size: 1rem;
+    margin-bottom: 0.5rem;
+    padding-bottom: 0.4rem;
+  }
+  .contact-links {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.8rem;
+    padding: 1.2rem 1.4rem;
+    border-radius: 1.8rem;
+  }
+  .contact-item {
+    font-size: 1rem;
+    width: 100%;
+  }
+  .contact-item a {
+    word-break: break-all;
+  }
+}
+
+@media (max-width: 400px) {
+  .profile-card {
+    padding: 1.2rem 0.9rem;
+  }
+  h1 {
+    font-size: 1.8rem;
+  }
+  .about-text {
+    padding: 0.9rem 1rem;
+  }
+  .skills-list {
+    padding-left: 1.4rem;
+    padding-right: 0.8rem;
+  }
+}
